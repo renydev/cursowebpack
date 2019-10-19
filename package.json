@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Curso de webpack",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack-cli": "^3.3.9",
-    "webpack": "^4.41.2"
+    "file-loader": "^4.2.0",
+    "loader": "^2.1.1",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
