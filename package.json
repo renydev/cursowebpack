@@ -1,0 +1,30 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Curso de webpack",
+  "main": "index.js",
+  "dependencies": {
+    "webpack-cli": "^3.3.9",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-cli src/index.js --output dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renydev/cursowebpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "curso",
+    "treinaweb"
+  ],
+  "author": "Renato Muller Ventura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renydev/cursowebpack/issues"
+  },
+  "homepage": "https://github.com/renydev/cursowebpack#readme"
+}
