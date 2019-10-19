@@ -27,10 +27,13 @@ $ npm start
 no _webpack.config.js_ foi adicionado um module
 ```
   module: {
-    rulers: [
+    rules: [
       {
         test: /\.(jpg|png|svg)$/, // aqui informa por regex qual seriam os arquivos afetados
-        use: {loader: 'url-loader'} // aqui informa qual pacote será utilizado para estes casos
+        --use: {loader: 'url-loader'} // aqui o curso estava desatualizado
+        use: [ // aqui informa qual pacote será utilizado para estes casos
+          'file-loader'
+        ]
       }
     ]
   }
