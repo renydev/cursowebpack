@@ -11,7 +11,9 @@ module.exports = {
     app: `${PATHS.src}/index2.js`,
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[chunkhash].js', // [name] isso é um placeholder, serve como variável
+    // a variável [hash] serve justamente para criar um hash e o navegador parar de cachear o arquivo
+    // a variável [chunkhash] gera um hash diferente somente se o arquivo foi alterado 
     path: PATHS.build
   },
   module: {
@@ -24,5 +26,13 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    minimize: true
+    /*
+      era feito por plugins, agora não é mais
+      new webpack.optimize.UglifyJsPlugin()
+    */
+  }
+  ,
   mode: 'development'
 }
