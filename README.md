@@ -16,12 +16,12 @@ ou adicione um comando dentro do package json
 ```
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config ./webpack.config.js"
+    "build": "webpack --config ./webpack.config.js"
   },
 ```
 então será possível executar um _npm start_ e então o webpack será executado
 ```
-$ npm start
+$ npm run build
 ```
 
 no _webpack.config.js_ foi adicionado um module

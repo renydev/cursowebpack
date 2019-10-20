@@ -1,10 +1,18 @@
 const path = require('path');
 
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  build: path.resolve(__dirname, 'dist')
+}
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    bundle: `${PATHS.src}/index.js`,
+    app: `${PATHS.src}/index2.js`,
+  },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].js',
+    path: PATHS.build
   },
   module: {
     rules: [
@@ -15,5 +23,6 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  mode: 'development'
 }
