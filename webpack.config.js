@@ -11,7 +11,8 @@ module.exports = {
     app: `${PATHS.src}/index2.js`,
   },
   output: {
-    filename: '[name].[chunkhash].js', // [name] isso é um placeholder, serve como variável
+    filename: '[name].js', // [name] isso é um placeholder, serve como variável
+    // filename: '[name].[hash].js', // [name] isso é um placeholder, serve como variável
     // a variável [hash] serve justamente para criar um hash e o navegador parar de cachear o arquivo
     // a variável [chunkhash] gera um hash diferente somente se o arquivo foi alterado 
     path: PATHS.build
@@ -23,7 +24,21 @@ module.exports = {
         use: [
           'file-loader'
         ]
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true // com isso ativo o webpack cria uma classe aleatória para os elementos
+              // , assim é possível é possível modularizar os css
+            }
+          },
+        ],
+      },
+
     ]
   },
   optimization: {
