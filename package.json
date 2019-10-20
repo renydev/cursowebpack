@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Curso de webpack",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
   "devDependencies": {
     "file-loader": "^4.2.0",
     "loader": "^2.1.1",

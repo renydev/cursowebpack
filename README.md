@@ -7,6 +7,14 @@ instalar o webpack cli
 $ npm i webpack && npm i webpack-cli
 ```
 
+toda vez que alguma biblioteca for utilizada é preciso lembrar
+```
+$ npm i -S -D
+```
+o __-D__ é utilizado para instalar como dependendia de desenvolvimento somente.
+o __-S__ é utilizado para instalar como dependendia de projeto.
+
+
 executar o webpack cli
 ```
 $ node_modules\.bin\webpack src/index.js --output dist/bundle.js
